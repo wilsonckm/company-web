@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
   <h1>Projects</h1>
   <p>Welcome to <%= title %></p>
+  <ul>
+    <% projects.forEach(function(p) { %>
+      <li class="images">
+        <img src= "<%=p.imageURL%>">
+      </li>    
+   <% }); %>  
+  </ul>
 
 <%- include('../partials/footer') %>
