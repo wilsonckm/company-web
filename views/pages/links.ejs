@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+  <h1>Additional Info</h1>
+
+  <ul>
+    <% links.forEach(function(l) { %>
+      <li>
+          <a href="<%= l.url %>"> <%= l.id %></a>
+      </li>
+    <% }); %>
+  </ul>
+
+<%- include('../partials/footer') %>

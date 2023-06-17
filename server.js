@@ -6,7 +6,12 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//added Routers for each page
+var aboutRouter = require('./routes/about');
+var contactRouter = require('./routes/contact');
+var linksRouter = require('./routes/links');
+var projectsRouter = require('./routes/projects');
+var staffRouter = require('./routes/staff');
 
 var app = express();
 
@@ -22,7 +27,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method')); 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//added app.use for each page
+app.use('/about', aboutRouter);
+app.use('/contact', contactRouter);
+app.use('/links', linksRouter);
+app.use('/projects', projectsRouter);
+app.use('/staff', staffRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
