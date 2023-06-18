@@ -14,3 +14,57 @@ img {
 .images {
   list-style: none
 }
+
+
+/* Menu/Navigation button */
+
+.menu {
+  display:inline-block;
+  cursor: pointer;
+  position: absolute;
+}
+
+.line1, .line2, .line3 {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  margin: 5px;
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.morph .line1 {
+  transform: translate(0,12px) rotate(45deg);
+}
+
+.morph .line2 {
+  opacity: 0;
+}
+
+.morph .line3 {
+  transform: translate(0, -12px) rotate(-45deg);
+}
+
+/* Hover for navigation*/
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-left: 15px;
+  filter: blur(0px);
+  transition: all 1.5s;
+}
+
+a:hover {
+  background-color: #af000000;
+  color: rgb(126, 126, 126);
+  filter: blur(1px);
+  transition: all .1s;
+}
+
+.hidden .link {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateX(-200%);
+}
